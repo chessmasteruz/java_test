@@ -4,7 +4,6 @@ public class Main {
 
     public static  void addPrefix(String st, Set<String> set){
         String s = new String(st);
-        int len = 0;
         int ind;
         do{
             set.add(s);
@@ -13,8 +12,6 @@ public class Main {
             if(ind > 0){
                 s = s.substring(0, ind);
             }
-
-            len ++ ;
         } while(ind > 0);
     }
 
@@ -33,7 +30,6 @@ public class Main {
 
         List<String> res = new ArrayList<>();
 
-
         arr.stream().forEach(s -> addPrefix(s,set));
 
         set.stream().forEach(s -> res.add(s));
@@ -41,9 +37,7 @@ public class Main {
         return res;
     }
 
-
     public static void main(String[] args){
-
 
         Scanner sc = new Scanner(System.in);
         List<String> arr = new ArrayList<>();
